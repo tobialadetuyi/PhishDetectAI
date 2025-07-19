@@ -1,10 +1,22 @@
-import pandas as pd
+# ✅ Place these at the very top of the file
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
+
+# Now define your functions/classes below
+def train_model(X_train, y_train):
+    # Example training pipeline
+    pipeline = Pipeline([
+        ('tfidf', TfidfVectorizer()),
+        ('clf', LogisticRegression())
+    ])
+    pipeline.fit(X_train, y_train)
+    joblib.dump(pipeline, 'phish_model.pkl')
+    return pipeline
+
+import pandas as pd
 
 # Load dataset
 df = pd.read_csv('data/emails.csv')
@@ -17,14 +29,6 @@ y = df['spam']
 
 # Train/test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
-import joblib
 
 # Load dataset
 df = pd.read_csv('data/emails.csv')
