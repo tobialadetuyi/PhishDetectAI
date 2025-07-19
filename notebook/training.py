@@ -32,4 +32,4 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 
 # Save model
 joblib.dump(model, 'model/phishing_classifier.pkl')
-print("✅ Model saved to model/phishing_classifier.pkl")
+print("Model saved to model/phishing_classifier.pkl")
