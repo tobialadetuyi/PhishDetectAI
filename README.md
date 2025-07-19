@@ -1,23 +1,43 @@
-HEAD
-# PhishDetectAI
+# 🛡️ PhishDetectAI
 
-PhishDetectAI is an AI-powered phishing detection tool that classifies messages as **Phishing** or **Safe** using Natural Language Processing (NLP).
-
- Built by **CyberAegis** for the **3MTT Knowledge Showcase – July Edition (AI Solution Category)**.
+PhishDetectAI is an AI-powered phishing detection system designed to analyze and classify email and message content for potential phishing threats. Ideal for businesses, cybersecurity researchers, and anti-fraud teams.
 
 
 
-## Features
--  Classifies text messages and emails as Safe or Phishing
--  Uses TF-IDF + Logistic Regression for training
--  Built with Python, scikit-learn, and Streamlit
--  Interactive Web Interface
+## 🚀 Features
+
+- 🧠 NLP-powered phishing message classification
+- 🔍 Detects suspicious phrases, patterns, and links
+- 🔐 API-ready for integration into web or enterprise platforms
+- 🧪 Tested on real phishing datasets
+- 📊 Supports JSON output for automation pipelines
 
 
 
-##  Project Structure
+## 📦 Tech Stack
 
+| Layer        | Tools / Libraries                  |
+|--------------|------------------------------------|
+| Language     | Python 3.x                         |
+| ML/NLP       | Scikit-learn, NLTK / SpaCy         |
+| Backend API  | Flask or FastAPI                   |
+| DevOps       | GitHub Actions                     |
+| Deployment   | Docker, Heroku / Render (Optional) |
 
-# PhishDetectAI
-An AI-powered tool to detect phishing and scam messages using Natural Language Processing. Built with Python, scikit-learn, and Streamlit.
->>>>>>> db2a63dd59c46f3c4c8b0b7b872529f1afbbff26
+---
+
+## 📁 Project Structure
+
+```bash
+PhishDetectAI/
+├── app/                      # Flask/FastAPI app
+│   ├── routes.py
+│   ├── model.py
+│   └── utils.py
+├── data/                     # Datasets and samples
+├── models/                   # Trained model files
+├── tests/                    # Unit tests
+├── .github/workflows/        # CI/CD configurations
+├── requirements.txt
+├── README.md
+└── main.py
